@@ -7,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 //Model Class
 @Table(name = "foods")
 @Entity(name = "foods")
@@ -23,8 +25,8 @@ import lombok.NoArgsConstructor;
 public class Food {
     //You can use either UUID or IDENTITY in this case. Since this application is simple, we can use IDENTITY.
     //When we have a complex application we need use UUID to security;
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
     private String title;
     private String image;
     private Integer price;
@@ -36,7 +38,7 @@ public class Food {
         this.title = data.title();
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
