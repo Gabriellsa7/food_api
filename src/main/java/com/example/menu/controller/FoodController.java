@@ -17,7 +17,7 @@ public class FoodController {
     private FoodRepository repository;
 
     //this method will send data that the client want POST in frontend, I use the @RequestBody
-    // to pick up the requisition body
+    // to pick up the requisition body;
     //CORS is a security feature implemented by web browsers to prevent web pages from making
     // requests to a different domain than the one that served the web page.
     @CrossOrigin(origins = "*", allowedHeaders = "*")
